@@ -1,0 +1,8 @@
+alias gs="git status"
+alias ga="git add"
+alias gaa="git add ."
+alias gcm="git commit -m"
+alias gcamend="git commit --amend"
+alias gb="git branch"
+alias gch="git checkout"
+alias gchb="git checkout -b"
