@@ -5,7 +5,10 @@ set rnu
 set number
 set encoding=utf-8
 set showcmd " show typed keys
-set nowrap
+set wrap
+set hidden
+set spell
+setlocal spell spelllang=es
 syntax on
 filetype plugin indent on
 
@@ -13,7 +16,7 @@ filetype plugin indent on
 "set modelines=0
 
 " Uncomment below to set the max textwidth. Use a value corresponding to the width of your screen.
-set textwidth=79
+" set textwidth=100
 set formatoptions=tcqrn1
 set tabstop=4
 set shiftwidth=4
@@ -72,6 +75,7 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'aklt/plantuml-syntax'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 autocmd vimenter * ++nested colorscheme gruvbox
@@ -83,6 +87,34 @@ let g:gruvbox_contrast_dark = 'hard'
 " ------------
 noremap <leader>c :tabedit ~/.vimrc<cr>
 noremap <leader>so :w<cr>:so %<cr>:q<cr>
+
+
+" -------------------
+"  REMOVE ARROW KEYS
+" -------------------
+" Remove newbie crutches in Command Mode
+cnoremap <Down> <Nop>
+cnoremap <Left> <Nop>
+cnoremap <Right> <Nop>
+cnoremap <Up> <Nop>
+
+" Remove newbie crutches in Insert Mode
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <Up> <Nop>
+
+" Remove newbie crutches in Normal Mode
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Up> <Nop>
+
+" Remove newbie crutches in Visual Mode
+vnoremap <Down> <Nop>
+vnoremap <Left> <Nop>
+vnoremap <Right> <Nop>
+vnoremap <Up> <Nop>
 
 
 " ----------
