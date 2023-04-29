@@ -11,7 +11,7 @@ function link() {
 }
 
 link bash_aliases .bash_aliases
-link vimrc .vimrc
+link vim/vimrc .vimrc
 link kitty .config/kitty
 mkdir -p $HOME/.local/bin; link scripts/t .local/bin/t
 link tmux/tmux.conf .tmux.conf
