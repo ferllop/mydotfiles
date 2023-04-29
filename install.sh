@@ -10,7 +10,7 @@ function link() {
     echo "Linked ${source_inside_dotfiles} to ${destination_inside_home}"
 }
 
-link bash_aliases .bash_aliases
+link bash/bash_aliases .bash_aliases
 link vim/vimrc .vimrc
 link kitty .config/kitty
 mkdir -p $HOME/.local/bin; link scripts/t .local/bin/t
