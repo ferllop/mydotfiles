@@ -18,5 +18,13 @@ require('nvim-treesitter.configs').setup({
         ['aa'] = '@parameter.outer',
       },
     }
+  },
+  rainbow = {
+    enable = true,
+    disable = { 'jsx', 'cpp' },
+    -- Which query to use for finding delimiters
+    query = 'rainbow-parens',
+    -- Highlight the entire buffer all at once
+    strategy = require('ts-rainbow').strategy.global,
   }
 })
