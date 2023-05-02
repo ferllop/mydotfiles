@@ -173,7 +173,7 @@ use({
 -- Clojure REPL driven development
 use('tpope/vim-fireplace')
 use('tpope/vim-salve')
-use('luochen1990/rainbow')
+use('gpanders/nvim-parinfer')
 
 -- A Status line.
 use({
