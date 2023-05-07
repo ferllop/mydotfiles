@@ -171,8 +171,13 @@ use({
 })
 
 -- Clojure REPL driven development
-use('tpope/vim-fireplace')
-use('tpope/vim-salve')
+use({
+  'liquidz/vim-iced',
+  requires = 'guns/vim-sexp',
+  config = function()
+    vim.g.iced_enable_default_key_mappings = true
+  end,
+})
 use('gpanders/nvim-parinfer')
 
 -- A Status line.
