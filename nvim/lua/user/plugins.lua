@@ -30,6 +30,14 @@ use('wbthomason/packer.nvim')
 use({
   'jessarcher/onedark.nvim',
   config = function()
+vim.api.nvim_create_augroup('Colorset', { clear = true })
+vim.api.nvim_create_autocmd('ColorScheme', {
+        group = 'Colorset',
+        callback = function()
+              local white = { gui= "#ABB2BF", cterm= "145", cterm16 = "7" }
+              vim.api.nvim_set_hl(0, 'Normal', { fg = '#ABB2BF' })
+        end,
+    })
     vim.cmd('colorscheme onedark')
 
     vim.api.nvim_set_hl(0, 'FloatBorder', {
