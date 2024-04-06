@@ -178,6 +178,19 @@ use({
   end,
 })
 
+use({
+    'jamesdiacono/Replete',
+    config = function()
+      vim.g.replete_command = { 
+        "node",
+        "--experimental-import-meta-resolve",
+        "/home/code/Replete/replete.js",
+        "--browser_port=52120",
+      }
+      vim.g.replete_cwd = "/home/ferran/code/evermind/backend"
+    end,
+})
+
 -- Clojure REPL driven development
 use({
   'liquidz/vim-iced',

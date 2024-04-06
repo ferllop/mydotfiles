@@ -26,6 +26,9 @@ require('lspconfig').jsonls.setup({
   },
 })
 
+-- ESLINT
+require'lspconfig'.eslint.setup({})
+
 -- Keymaps
 vim.keymap.set('n', '<Leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>')
 vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
@@ -35,6 +38,8 @@ vim.keymap.set('n', 'gi', ':Telescope lsp_implementations<CR>')
 vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
 vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+vim.keymap.set('n', '<M-CR>', '<cmd>lua vim.lsp.buf.code_action()<CR>')
+vim.keymap.set('n', '<Leader>ai', '<cmd>lua vim.lsp.buf.code_action({ diagnostics = vim.diagnostic.get(), only = { \'source.organizeImports\' } })<CR>')
 
 -- Diagnostic configuration
 vim.diagnostic.config({

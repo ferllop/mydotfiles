@@ -1,0 +1,3 @@
+leader k - open this file
+leader n - toggle folder/file navigation
+leader q - close buffer
